@@ -1,0 +1,47 @@
+<html>
+	<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel='stylesheet' href="Animation%20J.css"/>
+    <script> src ="Animation J.js"</script>
+	</head>
+	<h1>Feed Pac Man W/O Hitting the Blue</h1>
+<body>
+  <body style="background-image:url(https://i.pinimg.com/originals/52/a3/3c/52a33c10ae0c117156dd2807a4f324da.png")></body>
+  <h2>
+  <button class="right-btn">Right</button>
+  <button class="left-btn">Left</button>
+  <button class="down-btn">Down</button>
+  <button class="up-btn">Up</button>
+  <button class="stop-btn">Stop</button>
+  <button>Press the "Enter" Key to restart</button>
+  </h2>
+  <p>
+    <img src="https://i.ya-webdesign.com/images/pacman-png-gif-animation.gif">
+     <svg width="1000" height="100">
+      <circle class="circle" cx="900" cy="40" r="10" fill="yellow" />
+    </svg>
+	  <script>$(document).ready(function() {
+  $(".right-btn").click(function() {
+    $("img").animate({ left: "+=100px" }, 2000);
+  });
+  $(".left-btn").click(function() {
+    $("img").animate({ left: "-=100px" }, 2000);
+  });
+  $(".stop-btn").click(function() {
+    $("img").stop();
+  })
+  $(".up-btn").click(function() {
+    $("img").animate({ top: "-=100px" }, 2000);
+  });
+    $(".down-btn").click(function() {
+    $("img").animate({ top: "+=100px" }, 2000);
+  });
+    $(document).keydown(function(keyPressed) {
+      if (keyPressed.keyCode == 13)
+    $("img").animate({ left: "0" }, "fast");
+  });
+});</script>
+
+  </p>
+</body>
+</html>
